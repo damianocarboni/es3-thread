@@ -9,9 +9,11 @@ public class Main {
             threads[i] = t;
             t.start();
         }
+
         for(int i = 0; i < 10; i++){
             threads[i].join();
         }
+        
         for(int i = 0; i < 10; i++){
             System.out.print(array [i] + " ");
         }
